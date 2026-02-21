@@ -51,7 +51,7 @@
         <div class="heading_details grid grid-cols-3 gap-6 mx-auto">
           <div class="detail_one p-4 rounded-md bg-white">
             <p>Total</p>
-            <h2 id="totalCount" class="text-neutral font-bold">8</h2>
+            <h2 id="totalCount" class="text-neutral font-bold">0</h2>
           </div>
           <div class="detail_two p-4 rounded-md bg-white">
             <p>Interview</p>
@@ -78,13 +78,13 @@
         </div>
       </div>
       <div class="tab_buttons">
-        <button class="btn btn-active btn-primary" id="all-filter-btn">
+        <button onclick="toggleStyle('all-filter-btn')" class="btn bg-blue-700 text-white" id="all-filter-btn">
           All
         </button>
-        <button class="btn btn-soft btn-primary" id="interview-filter-btn">
+        <button onclick="toggleStyle('interview-filter-btn')" class="btn bg-white text-[#64748B]" id="interview-filter-btn">
           Interview
         </button>
-        <button class="btn btn-soft btn-primary" id="rejected-filter-btn">
+        <button onclick="toggleStyle('rejected-filter-btn')" class="btn bg-white text-[#64748B]" id="rejected-filter-btn">
           Rejected
         </button>
       </div>
