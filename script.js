@@ -71,8 +71,9 @@ document.addEventListener('click', function(event) {
     rejectedList = rejectedList.filter(item => item.companyName !== companyName);
 
     const originalCards = document.querySelectorAll('#all_cards .job_card_one');
-
+        console.log(originalCards);
     originalCards.forEach(c => {
+        
         const name = c.querySelector('.companyName').innerText;
         if (name === companyName) {
             c.remove();
