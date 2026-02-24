@@ -228,3 +228,103 @@ function renderRejected (){
 
     }
 }
+
+function renderInterview() {
+    filterSection.innerHTML = '';
+
+   
+    if (interviewList.length === 0) {
+        filterSection.innerHTML = `
+            <div class="text-center mt-10">
+                <img src="./jobs.png" 
+                     alt="No Rejected Jobs" 
+                     class="mx-auto w-45 opacity-95">
+                <h3 class="mt-4 text-gray-500 text-lg font-semibold">
+                    No Interview Jobs Found
+                </h3>
+                <p class="mt-4 text-gray-500 text-sm">
+                    Check back soon for new job opportunities
+                </p>
+            </div>
+        `;
+        return; 
+    }
+
+
+    for (let interview of interviewList) {
+
+        let div = document.createElement('div');
+        div.className = 'max-w-[80%] mx-auto m-5';
+
+        div.innerHTML = `
+        <div class="job_card_one bg-white mb-5 p-5 rounded-lg flex justify-between">
+          <div class="card_left space-y-4">
+            <h4 class="companyName font-semibold text-xl">${interview.companyName}</h4>
+            <p class="jobPosition text-[#64748B]">${interview.jobPosition}</p>
+            <p class="address text-[#64748B]">${interview.address}</p>
+            <button class="jobStatus btn btn-soft btn-accent">${interview.jobStatus}</button>
+            <p class="jobDescription text-[#64748B]">${interview.jobDescription}</p>
+            <div class="card_buttons">
+              <button class="btn btn-outline btn-success">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <div class="card_right">
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+        </div>
+        `;
+
+        filterSection.appendChild(div);
+    }
+}
+
+function renderRejected() {
+    filterSection.innerHTML = '';
+
+    
+    if (rejectedList.length === 0) {
+        filterSection.innerHTML = `
+            <div class="text-center mt-10">
+                <img src="./jobs.png" 
+                     alt="No Rejected Jobs" 
+                     class="mx-auto w-45 opacity-95">
+                <h3 class="mt-4 text-gray-500 text-lg font-semibold">
+                    No Rejected Jobs Found
+                </h3>
+                <p class="mt-4 text-gray-500 text-sm">
+                    Check back soon for new job opportunities
+                </p>
+            </div>
+        `;
+        return;
+    }
+
+  
+    for (let rejected of rejectedList) {
+
+        let div = document.createElement('div');
+        div.className = 'max-w-[80%] mx-auto m-5';
+
+        div.innerHTML = `
+        <div class="job_card_one bg-white mb-5 p-5 rounded-lg flex justify-between">
+          <div class="card_left space-y-4">
+            <h4 class="companyName font-semibold text-xl">${rejected.companyName}</h4>
+            <p class="jobPosition text-[#64748B]">${rejected.jobPosition}</p>
+            <p class="address text-[#64748B]">${rejected.address}</p>
+            <button class="jobStatus btn btn-soft btn-error">${rejected.jobStatus}</button>
+            <p class="jobDescription text-[#64748B]">${rejected.jobDescription}</p>
+            <div class="card_buttons">
+              <button class="btn btn-outline btn-success">INTERVIEW</button>
+              <button class="btn btn-outline btn-error">REJECTED</button>
+            </div>
+          </div>
+          <div class="card_right">
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+        </div>
+        `;
+
+        filterSection.appendChild(div);
+    }
+}
