@@ -240,7 +240,7 @@ function renderInterview() {
                      alt="No Rejected Jobs" 
                      class="mx-auto w-45 opacity-95">
                 <h3 class="mt-4 text-gray-500 text-lg font-semibold">
-                    No Interview Jobs Found
+                    No jobs Available
                 </h3>
                 <p class="mt-4 text-gray-500 text-sm">
                     Check back soon for new job opportunities
@@ -290,7 +290,7 @@ function renderRejected() {
                      alt="No Rejected Jobs" 
                      class="mx-auto w-45 opacity-95">
                 <h3 class="mt-4 text-gray-500 text-lg font-semibold">
-                    No Rejected Jobs Found
+                    No jobs Available
                 </h3>
                 <p class="mt-4 text-gray-500 text-sm">
                     Check back soon for new job opportunities
